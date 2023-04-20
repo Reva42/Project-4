@@ -15,12 +15,19 @@
     height: 65px;
     background-color:#758475;
     padding: 12px;
+    padding-top: 1.5pc;
+    padding-bottom: 0pc;
+}
+
+.fa-bell {
+    padding-right: 2pc;
 }
 
 .nav, li, ul, a, i {
     text-decoration: none;
     display: inline;
     margin: 10px;
+
 }
 
 .oversigt {
@@ -32,7 +39,7 @@
 
 .søg {
    float:left;
-   margin-left: 8pc;
+   margin-left: 11pc;
    border-radius: 15px;
    border: 1px solid #5A655B;
    background:#D8D6D0;
@@ -46,35 +53,231 @@
 
 /*This is the CSS for the Sidebar*/ 
 .sidebar {
+    background-color: #E6E1DC;
     color:#343E34;
     position: fixed;
+    z-index: 1;
     top: 0;
-    width: 17%;
+    left: 0;
+    max-width: 220px;
     height: 100%;
-    background-color: #E6E1DC;
     padding: 20px;
-    margin-top: 89px;
-  }
+    margin-top: 89px; 
+    overflow-y: auto
+}
 
+
+/* Thi is the CSS for the Sidebar content */
 .fa-user-circle-o {
     color:#343E34;
 }
 
+/* Profile */
+.profil {
+     display: flex;
+     align-items: center;    
+}
+
+.fa-user-circle-o {
+    margin-left: -9px;
+    margin-right: 4px;
+}
+
 .name {
-    float:right;
-    padding-top: 1.3pc;
-    padding-right: 4.6pc;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 0.5px solid #4d524d;
+    background-color:  rgb(252, 249, 249);
+    border-radius: 7px;
+    width: 6pc;
+    padding: 2px;
+    margin-bottom: 5px;
     font-size: 15px;
     font-weight: 550;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    text-align: center;
+    width: 50%;
 }
 
 .info {
-    float: right;
-    margin-top: -3.5pc;
-    font-size: 13px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
+    border: 0.5px solid #4d524d;
+    background-color:  rgb(252, 249, 249);
+    border-radius: 7px;
+    width: 12pc;
+    padding: 2px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    text-align: center; 
+    display: inline-block;
+    width: 50%;
+}
 
+/* Kalenderene */
+.k1, .k2, .k3 {
+    font-size: 14px;
+    font-weight:550;
+    margin-left: 10px;
+    margin-bottom: 5px
+}
+
+.fa-circle{
+    padding: 0;
+    margin: 0;
+}
+
+/* Noter */
+.noter {
+    background-color: rgb(252, 249, 249);
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 190px;
+    height: 72px;
+    padding: 10px;
+    margin-bottom: 25px;
+    float: left;
+    left: 0;
+    top: 0;
+    cursor: move;
+}
+
+.noter-overskrift {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.noter-brødtekst {
+    font-style: italic;
+    background-color: rgb(252, 249, 249);
+    border-radius: 7px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.tilføj {
+    border: none;
+    font-size: 70%;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* To Do */
+.todo-overskrift {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.todo-brødtekst  {
+    font-style: italic;
+    background-color: rgb(252, 249, 249);
+    border-radius: 7px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-do p {
+    font-size: x-small;
+    font-style: italic;
+}
+
+.to-do {
+    background-color: rgb(252, 249, 249);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 190px;
+    height: 200px;
+    padding: 10px;
+    margin: 0 auto;
+    position: relative;
+    justify-content:center;
+    align-items: center;    
+    display: inline-block;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.to-do label {
+    position: relative;
+    display: block;
+    margin: 25px 0px;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+
+.to-do input[type ="checkbox"] {
+    -webkit-appearance: none;
+}
+
+.to-do i {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #343E34;
+    border-radius: 5px;
+}
+
+.to-do input[type ="checkbox"]:checked ~ i {
+    top: 1px;
+    border-top: none;
+    border-right: none;
+    width: 20px;
+    height: 10px;
+    transform: rotate(-45deg);
+    position: absolute; 
+}
+
+.to-do span {
+    position: absolute;
+    left: 40px;
+    transition: 0.5s;    
+}
+
+.to-do span:before {
+    content: '';
+    position: absolute; 
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: right;
+    transition:transform 0.5s;
+    display: inline-block;
+
+}
+
+.to-do input[type ="checkbox"]:checked ~ span:before {
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left;
+    transition:transform 0.5s;
+    display: inline-block;
+
+}
+
+.to-do input[type ="checkbox"]:checked ~ span {
+    color: green;
+    display: inline-block;
+}
+
+/* Prosesbar */
+.proc-overskrift {
+    text-decoration: underline 2px;
+    margin-top: 30px;
+}
+
+
+/* Motivational Quote */
+.motivation {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-style: italic;
 }

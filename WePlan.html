@@ -5,10 +5,13 @@
     <title>WePlan.com</title>
     <link rel="stylesheet" href="WePlan.CSS">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Noter - Drag &b Drop.js"></script>
+    <script src="To do.js"></script>
+
 </head>
 
-<!-- /*This is the Navigation bar design*/ -->
-    <header class="main-header">
+<!-- This is the Navigation bar design -->
+<header class="main-header">
     <nav class=" nav, main-nav">
         <li class="logo"> LOGO </li>
         <input type="text" placeholder="SØG HER..." class="søg">
@@ -19,15 +22,69 @@
         <i href="#" class="fa fa-cog fa-lg"></i>
         <i href="#" class="fa fa-bell fa-lg"></i>
     </nav>
-    </header>
-x
-<!-- /*This is the Sidebar design*/ -->
-    <div class="sidebar">
-        <i href="#" class="fa fa-user-circle-o fa-5x"></i>
-        <p class="name"> John Doe </p>
-        <p class="info"> UCL / Multimediedesigner <br>  2. Semester </p>
-        <h2>Sidebar Title</h2>
-        <p>Sidebar content goes here.</p>
+</header>
+
+<!-- This is the Sidebar design -->
+<div class="sidebar">
+    <div class="profil">
+        <i href="#" class="fa fa-user-circle-o fa-4x"></i>  
+        <h1 class="name">John Doe </h1>
+        <p class="info"> UCL / Multimediedesigner <br>  2. Semester, Hold 1. </p>  
+    </div>
+    
+    <div>
+        <p class="k1"> <i class="fa fa-circle" class="arbejde" aria-hidden="true" style="color: rgb(208, 34, 34)
+        ;"> </i> Arbejde </p>
+        <p class="k2"> <i class="fa fa-circle" aria-hidden="true" style="color: orange;"></i> Skole </p> 
+        <p class="k3"> <i class="fa fa-circle" aria-hidden="true" style="color: green;"></i> Fritid </p>
+        <i href="#" class="fa fa-bell fa-lg1"></i>
+    </div>
+    <br>
+
+<!-- The HTML for notes -->
+    <div class="noter" draggable="true"> 
+        <h4 class="noter-overskrift">Noter:</h4>
+        <input class="tilføj" type="text" placeholder="Tilføje Ny Note Her...">
+        <button class="noter-brødtekst">Træk & Tilføje</button>
     </div>
 
+<!-- The HTML for To Do -->
+    <div class="to-do">
+    <h4 class="todo-overskrift">To Do:</h4> 
+       <label> 
+        <input type="checkbox" name=""> 
+        <i></i>
+        <span> Rengøring <br> <p>7/7 Udførte</p></span>
+       </label>
+
+       <label> 
+        <input type="checkbox" name=""> 
+        <i></i>
+        <span> Aflevering af rapport <br> <p>2/3 Udførte</p></span>
+       </label>
+
+       <label> 
+        <input type="checkbox" name=""> 
+        <i></i>
+        <span> Fest planlægning <br> <p>8/10 Udførte</p></span>
+       </label>
+
+       <div class="container">
+        <button class="todo-brødtekst">Tilføje</button>
+       </div>
+    </div>
+
+<!-- The HTML for Processbar -->
+    <div class="procesbar">
+        <h4 class="proc-overskrift"> Procesbar:</h4>
+        <br>
+        <img class="proces-foto" src="procesbar.png" alt="Samlet Procesbar">
+    </div>
+
+<!-- Motivational Quote -->
+    <div class="motivation">
+        <h5>" KEEP IT UP. YOU CAN DO IT! " </h5>
+    </div>
+
+</div>
 </html> 
