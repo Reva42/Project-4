@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="kalender.css" />
+	  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+  </head>
+<!-- This is the Navigation bar design -->
+<header class="main-header">
+    <nav class=" nav, main-nav">
+        <li class="logo"><img scr="logo.png"  width="100px" height="70px" id="logo" alt="logo image"></li>
+        <input type="text" placeholder="SØG HER..." class="søg">
+        <li class="oversigt"><a>OVERSIGT</a></li>
+        <li><a herf="s-m.html">SKOLE</a></li>
+        <li><a herf="a-m.html">ARBEJDE</a></li>
+        <li><a herf="f-m.html">FRITID</a></li>
+        <i href="#" class="fa fa-cog fa-lg"></i>
+        <i href="#" class="fa fa-bell fa-lg"></i>
+    </nav>
+</header>
+
+<body>
+<div class="row">
+  <div class="column left" >
+  <!-- This is the Sidebar design -->
+<div class="sidebar">
+    <div class="profil">
+        <i href="#" class="fa fa-user-circle-o fa-4x"></i>  
+        <h1 class="name">John Doe </h1>
+        <p class="info"> UCL / Multimediedesigner <br>  2. Semester, Hold 1. </p>  
+    </div>
+    
+    <div>
+        <p class="k1"> <i class="fa fa-circle" class="arbejde" aria-hidden="true" style="color: rgb(208, 34, 34)
+        ;"> </i> Arbejde </p>
+        <p class="k2"> <i class="fa fa-circle" aria-hidden="true" style="color: orange;"></i> Skole </p> 
+        <p class="k3"> <i class="fa fa-circle" aria-hidden="true" style="color: green;"></i> Fritid </p>
+        <i href="#" class="fa fa-bell fa-lg1"></i>
+    </div>
+    <br>
+
+<!-- The HTML for notes -->
+    <div class="noter" draggable="true"> 
+        <h4 class="noter-overskrift">Noter:</h4>
+        <input class="tilføj" type="text" placeholder="Tilføje Ny Note Her...">
+        <button class="noter-brødtekst">Træk & Tilføje</button>
+    </div>
+
+<!-- The HTML for To Do -->
+    <div class="to-do">
+    <h4 class="todo-overskrift">To Do:</h4> 
+       <label> 
+        <input type="checkbox" name=""> 
+        <i></i>
+        <span> Rengøring <br> <p>7/7 Udførte</p></span>
+       </label>
+
+       <label> 
+        <input type="checkbox" name=""> 
+        <i></i>
+        <span> Aflevering af rapport <br> <p>2/3 Udførte</p></span>
+       </label>
+
+       <label> 
+        <input type="checkbox" name=""> 
+        <i></i>
+        <span> Fest planlægning <br> <p>8/10 Udførte</p></span>
+       </label>
+
+       <div class="container">
+        <button class="todo-brødtekst">Tilføje</button>
+       </div>
+    </div>
+
+<!-- The HTML for Processbar -->
+    <div class="procesbar">
+        <h4 class="proc-overskrift"> Procesbar:</h4>
+        <br>
+        <img class="proces-foto" src="procesbar.png" alt="Samlet Procesbar">
+    </div>
+
+<!-- Motivational Quote -->
+    <div class="motivation">
+        <h5>" KEEP IT UP. YOU CAN DO IT! " </h5>
+    </div>
+
+</div>
+  </div>
+
+  <div class="column right">
+   <ul class="breadcrumb">
+  <li><a href="index.html">Oversigt</a></li>
+  <li><a href="s-m.html">Skole</a></li>
+  <li>Uge</li>
+</ul>
+	
+  <div class="btn-group">
+  <button class="a">Tilføj Event</button>
+  <button class="b">Tilføj To Do</button>
+  <button class="s">Moduler</button>
+  <button class="c">Måned</button>
+  <button class="d" herf="o-u.html">Uge</button>
+  <button class="e">Dag</button>
+  <i class="fa fa-share"></i>
+</div>
+	
+    <div class="container">
+      <div class="calendar">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1>Uge <span id="week-number"></span></h1>
+			  <p class="currentTime"></p>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+         <div class="weekdays">
+		  <div>Tid</div>
+          <div>Man</div>
+          <div>Tir</div>
+          <div>Ons</div>
+          <div>Tor</div>
+          <div>Fre</div>
+          <div>Lør</div>
+		  <div>Søn</div>
+        </div>
+	<div id="table-container"></div>
+
+  <div class="content">
+    <div class="time" style="grid-row:1">00:00</div>
+    <div class="time" style="grid-row:2">02:00</div>
+    <div class="time" style="grid-row:4">04:00</div>
+    <div class="time" style="grid-row:6">06:00</div>
+    <div class="time" style="grid-row:8">08:00</div>
+	<div class="time" style="grid-row:10">10:00</div>
+    <div class="time" style="grid-row:12">12:00</div>
+    <div class="time" style="grid-row:14">14:00</div>
+    <div class="time" style="grid-row:16">16:00</div>
+    <div class="time" style="grid-row:18">18:00</div>
+    <div class="time" style="grid-row:20">20:00</div>
+    <div class="time" style="grid-row:22">22:00</div>
+    <div class="time" style="grid-row:23">24:00</div>
+    <div class="filler-col"></div>
+    <div class="col" style="grid-column:3"></div>
+    <div class="col" style="grid-column:4"></div>
+    <div class="col" style="grid-column:5"></div>
+    <div class="col" style="grid-column:6"></div>
+    <div class="col" style="grid-column:7"></div>
+    <div class="col weekend" style="grid-column:8"></div>
+    <div class="col weekend" style="grid-column:9"></div>
+    <div class="col" style="grid-column:10"></div>
+    <div class="row" style="grid-row:1"></div>
+    <div class="row" style="grid-row:2"></div>
+    <div class="row" style="grid-row:3"></div>
+    <div class="row" style="grid-row:4"></div>
+    <div class="row" style="grid-row:5"></div>
+    <div class="row" style="grid-row:6"></div>
+    <div class="row" style="grid-row:7"></div>
+    <div class="row" style="grid-row:8"></div>
+    <div class="row" style="grid-row:9"></div>
+    <div class="row" style="grid-row:10"></div>
+    <div class="row" style="grid-row:11"></div>
+    <div class="row" style="grid-row:12"></div>
+    <div class="row" style="grid-row:13"></div>
+    <div class="row" style="grid-row:14"></div>
+    <div class="row" style="grid-row:15"></div>
+    <div class="row" style="grid-row:16"></div>
+    <div class="row" style="grid-row:17"></div>
+    <div class="row" style="grid-row:18"></div>
+    <div class="row" style="grid-row:19"></div>
+    <div class="row" style="grid-row:20"></div>
+    <div class="row" style="grid-row:21"></div>
+    <div class="row" style="grid-row:22"></div>
+    <div class="row" style="grid-row:23"></div>
+		  </div>
+	</div>
+    </div>
+	</div>
+    <script src="uge.js"></script>
+	<script src="note.js"></script>
+    <script src="to-do.js"></script>
+  </body>
+</html>
