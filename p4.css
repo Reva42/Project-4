@@ -1,0 +1,632 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ariel", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body{
+margin-top: 80px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: auto;
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+.calendar {
+  margin-top: 20px;
+  width: 400px;
+  height: 400px;
+  background-color: #FFFFFF;
+  box-shadow: #343E34;
+}
+
+.month {
+  width: 100%;
+  height: 70px;
+  background-color:#758475;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2px;
+  text-align: center;
+}
+
+.month i, .button i {
+  font-size: 15px;
+  cursor: pointer;
+  color:#D8D6D0;
+}
+
+.month h1 {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1px;
+  color:#D8D6D0;
+}
+
+.weekdays {
+  width: 400px;
+  height: 20px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  background: #D8D6D0;
+}
+
+.weekdays div {
+  font-size: 15px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  width:400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.days {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2px;
+}
+
+.days div {
+  font-size: 18px;
+  margin: 2px;
+  width: 52px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+  background-color: #D8D6D0;
+  border: 2px solid #E6E1DC;
+  cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: #758475;
+}
+
+.btn-group button {
+  background-color: #D8D6D0;
+  color: #343E34;
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  align-content: right;
+  border-radius:12px;
+  font-size: 13px;
+  margin-top: 18px;
+}
+.a{
+margin-left:10px;
+margin-right: 20px;
+}
+.b{
+margin-right: 20px;
+}
+.c{
+margin-left: 300px;
+}
+
+.c .d .e{
+margin-right: 10px;
+}
+
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color:#758475;
+}
+
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+  margin: 10px;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color:#343E34;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #758475;
+  text-decoration: underline;
+}
+
+.tid{
+	display:grid;
+	border: 1px solid;
+	height: 270px;
+	border-color: #343E34;
+	grid-color: #343E34;
+}
+
+ul.moduler {
+    list-style: none;
+    padding: 0;
+	margin-left: 170px;
+  }
+  
+  li {
+    display:flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .box {
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    border: 1px solid #343e34;
+    margin-right: 10px;
+    margin-left: 100px;
+  }
+  
+  .text {
+    margin-left: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #343e34;
+    line-height: 70px;
+    font-size: 22px;
+  }
+  
+  .text1 {
+    margin-left: -360px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #343e34;
+    opacity: 0.50;
+  }
+
+  .text2 {
+    margin-left: -298px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #343e34;
+    opacity: 0.50;
+  }
+
+  .text3 {
+    margin-left: -284px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #343e34;
+    opacity: 0.50;
+  }
+
+  .text4 {
+    margin-left: -423px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #343e34;
+    opacity: 0.50;
+  } 
+
+  .text5 {
+    margin-left: -213px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #343e34;
+    opacity: 0.50;
+  }
+  
+  .text6 {
+    margin-left: -285px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #343e34;
+    opacity: 0.50;
+  }
+
+  h1{
+     
+     font-family: Arial, sans-serif;
+	 color: #343e34;
+}
+
+ul.læringsmål {
+    list-style: none;
+    padding: 0;
+	margin-left: 170px;
+  }
+
+/*note side - flexbox*/ 
+.notebox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left:10px;
+  }
+  .notebox-item{
+    width: 800px;
+    background-color: #D8D6D0;
+    padding: 10px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.199);
+    border-radius: 5px;
+  }
+  .notebox-item-2{
+    width: 800px;
+    background-color: #D8D6D0;
+    padding: 10px;
+    border: 3px black;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.199);
+  }
+  .notebox-item-3{
+    width: 800px;
+    background-color: #D8D6D0;
+    padding: 10px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.199);
+  }
+  .notebox-item-4{
+    width: 800px;
+    background-color: #D8D6D0;
+    padding: 10px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.199);
+  }
+  .notebox-item-5{
+    width: 800px;
+    background-color: #D8D6D0;
+    padding: 10px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.199);
+  }
+  .notebox-item-6{
+    width: 800px;
+    background-color: #D8D6D0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+
+.main-nav {
+    color: #D8D6D0;
+    font-weight:600;
+    position: fixed;
+    text-align:right;
+    top: 0;
+    width: 100%;
+    height: 65px;
+    background-color:#758475;
+    padding: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+	font-size: 15px;
+	
+}
+
+.fa-bell {
+    padding-right: 2px;
+}
+
+.nav, li, ul, a, i {
+    text-decoration: none;
+    display: inline;
+    margin: 10px 10px 0;
+
+}
+
+.oversigt {
+    color:#343E34;
+    border: 3px solid #D8D6D0;
+    background: #D8D6D0;
+    border-radius: 8px;
+}
+
+.søg {
+   float:left;
+   margin-left: 11pc;
+   border-radius: 15px;
+   border: 1px solid #5A655B;
+   background:#D8D6D0;
+   padding: 10px;
+   width: 300px;
+}
+
+.logo {
+    float: left;
+}
+
+/*This is the CSS for the Sidebar*/ 
+.sidebar {
+	background-color: #D8D6D0;
+    color:#343E34;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+	width: 20%;
+    height: 500px;
+    padding: 20px;
+    margin-top: 79px; 
+	margin-bottom: 40px;
+	overflow-y:auto;
+}
+
+
+/* Thi is the CSS for the Sidebar content */
+.fa-user-circle-o {
+    color:#343E34;
+}
+
+/* Profile */
+.profil {
+     display: flex;
+     align-items: center;    
+}
+
+.fa-user-circle-o {
+    margin-left: -9px;
+    margin-right: 4px;
+}
+
+.name {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 0.5px solid #4d524d;
+    background-color:  rgb(252, 249, 249);
+    border-radius: 7px;
+    width: 6pc;
+    padding: 2px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 550;
+    text-align: center;
+    width: 50%;
+}
+
+.info {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 0.5px solid #4d524d;
+    background-color:  rgb(252, 249, 249);
+    border-radius: 7px;
+    width: 12pc;
+    padding: 2px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    text-align: center; 
+    display: inline-block;
+    width: 50%;
+}
+
+/* Kalenderene */
+.k1, .k2, .k3 {
+    font-size: 14px;
+    font-weight:550;
+    margin-left: 10px;
+    margin-bottom: 5px
+}
+
+.fa-circle{
+    padding: 0;
+    margin: 0;
+}
+
+/* Noter */
+.noter {
+    background-color: rgb(252, 249, 249);
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 190px;
+    height: 72px;
+    padding: 10px;
+    margin-bottom: 25px;
+    float: left;
+    left: 0;
+    top: 0;
+    cursor: move;
+}
+
+.noter-overskrift {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.noter-brødtekst {
+    font-style: italic;
+    background-color: rgb(252, 249, 249);
+    border-radius: 7px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.tilføj {
+    border: none;
+    font-size: 70%;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* To Do */
+.todo-overskrift {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.todo-brødtekst  {
+    font-style: italic;
+    background-color: rgb(252, 249, 249);
+    border-radius: 7px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-do p {
+    font-size: x-small;
+    font-style: italic;
+}
+
+.to-do {
+    background-color: rgb(252, 249, 249);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 190px;
+    height: 200px;
+    padding: 10px;
+    margin: 0 auto;
+    position: relative;
+    justify-content:center;
+    align-items: center;    
+    display: inline-block;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.to-do label {
+    position: relative;
+    display: block;
+    margin: 25px 0px;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    
+}
+
+.to-do input[type ="checkbox"] {
+    -webkit-appearance: none;
+}
+
+.to-do i {
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1.5px solid #343E34;
+    border-radius: 5px;
+}
+
+.to-do input[type ="checkbox"]:checked ~ i {
+    top: 1px;
+    border-top: none;
+    border-right: none;
+    width: 20px;
+    height: 10px;
+    transform: rotate(-45deg);
+    position: absolute; 
+}
+
+.to-do span {
+    position: absolute;
+    left: 40px;
+    transition: 0.5s;    
+}
+
+.to-do span:before {
+    content: '';
+    position: absolute; 
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: right;
+    transition:transform 0.5s;
+    display: inline-block;
+
+}
+
+.to-do input[type ="checkbox"]:checked ~ span:before {
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left;
+    transition:transform 0.5s;
+    display: inline-block;
+
+}
+
+.to-do input[type ="checkbox"]:checked ~ span {
+    color: green;
+    display: inline-block;
+}
+
+/* Prosesbar */
+.proc-overskrift {
+    text-decoration: underline 2px;
+    margin-top: 30px;
+	font-size: 15px;
+}
+
+
+/* Motivational Quote */
+.motivation {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-style: italic;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 20%;
+  }
+
+.right {
+  width: 80%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
