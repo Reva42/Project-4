@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="kalender.css" />
+	  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+  </head>
+<!-- This is the Navigation bar design -->
+<header class="main-header">
+    <nav class=" nav, main-nav">
+        <li class="logo"><img scr="logo.png"  width="100px" height="70px" id="logo" alt="logo image"></li>
+        <input type="text" placeholder="SØG HER..." class="søg">
+        <li class="oversigt"><a>OVERSIGT</a></li>
+        <li><a herf="s-m.html">SKOLE</a></li>
+        <li><a herf="a-m.html">ARBEJDE</a></li>
+        <li><a herf="f-m.html">FRITID</a></li>
+        <i href="#" class="fa fa-cog fa-lg"></i>
+        <i href="#" class="fa fa-bell fa-lg"></i>
+    </nav>
+</header>
+
+<body>
+
+<div class="row">
+  <div class="column left" >
+  <!-- This is the Sidebar design -->
+<div class="sidebar">
+    <div class="profil">
+        <i href="#" class="fa fa-user-circle-o fa-4x"></i>  
+        <h1 class="name">John Doe </h1>
+        <p class="info"> UCL / Multimediedesigner <br>  2. Semester, Hold 1. </p>  
+    </div>
+    
+    <div>
+        <p class="k1"> <i class="fa fa-circle" class="arbejde" aria-hidden="true" style="color: rgb(208, 34, 34)
+        ;"> </i> Arbejde </p>
+        <p class="k2"> <i class="fa fa-circle" aria-hidden="true" style="color: orange;"></i> Skole </p> 
+        <p class="k3"> <i class="fa fa-circle" aria-hidden="true" style="color: green;"></i> Fritid </p>
+        <i href="#" class="fa fa-bell fa-lg1"></i>
+    </div>
+    <br>
+
+<!-- The HTML for notes -->
+    <div class="noter" draggable="true"> 
+        <h4 class="noter-overskrift">Noter:</h4>
+        <input class="tilføj" type="text" placeholder="Tilføje Ny Note Her...">
+        <button class="noter-brødtekst">Træk & Tilføje</button>
+    </div>
+
+<!-- The HTML for To Do -->
+    <div class="to-do">
+    <h4 class="todo-overskrift">To Do:</h4> 
+       <label> 
+        <input type="checkbox" name=""> 
+        <i></i>
+        <span> Rengøring <br> <p>7/7 Udførte</p></span>
+       </label>
+
+       <label> 
+        <input type="checkbox" name=""> 
+        <i></i>
+        <span> Aflevering af rapport <br> <p>2/3 Udførte</p></span>
+       </label>
+
+       <label> 
+        <input type="checkbox" name=""> 
+        <i></i>
+        <span> Fest planlægning <br> <p>8/10 Udførte</p></span>
+       </label>
+
+       <div class="container">
+        <button class="todo-brødtekst">Tilføje</button>
+       </div>
+    </div>
+
+<!-- The HTML for Processbar -->
+    <div class="procesbar">
+        <h4 class="proc-overskrift"> Procesbar:</h4>
+        <br>
+        <img class="proces-foto" src="procesbar.png" alt="Samlet Procesbar">
+    </div>
+
+<!-- Motivational Quote -->
+    <div class="motivation">
+        <h5>" KEEP IT UP. YOU CAN DO IT! " </h5>
+    </div>
+
+</div>
+  </div>
+
+  <div class="column right">
+   <ul class="breadcrumb">
+  <li><a href="index.html">Oversigt</a></li>
+  <li>Arbejde</li>
+</ul>
+	
+  <div class="btn-group">
+  <button class="a">Tilføj Event</button>
+  <button class="b">Tilføj To Do</button>
+  <button class="c">Måned</button>
+  <button class="d" herf="o-u.html">Uge</button>
+  <button class="e">Dag</button>
+  <i class="fa fa-share"></i>
+</div>
+	
+    <div class="container">
+      <div class="calendar">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1>Marts</h1>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+		  <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days">
+		  <div class="prev-date">27</div>
+		  <div class="prev-date">28</div>
+		  <div class="prev-date">29</div>
+		  <div class="prev-date">30</div>
+		  <div class="prev-date">31</div>
+		  <div>1</div>
+		  <div>2</div>
+		  <div>3</div>
+		  <div>4</div>
+		  <div>5</div>
+		  <div>6</div>
+		  <div>7</div>
+		  <div>8</div>
+		  <div>9</div>
+		  <div>10</div>
+		  <div>11</div>
+		  <div>12</div>
+		  <div>13</div>
+		  <div>14</div>
+		  <div>15</div>
+		  <div>16</div>
+		  <div>17</div>
+		  <div>18</div>
+		  <div>19</div>
+		  <div>20</div>
+		  <div>21</div>
+		  <div>22</div>
+		  <div>23</div>
+		  <div>24</div>
+		  <div>25</div>
+		  <div>26</div>
+		  <div>27</div>
+		  <div>28</div>
+		  <div>29</div>
+		  <div>30</div>
+		  <div>31</div>
+		  <div class="next-date">1</div>
+		  <div class="next-date">2</div>
+		  <div class="next-date">3</div>
+		  <div class="next-date">4</div>
+		  <div class="next-date">5</div>
+		  <div class="next-date">6</div>
+		</div>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="måned.js"></script>
+	<script src="note.js"></script>
+    <script src="to-do.js"></script>
+  </body>
+</html>
